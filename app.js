@@ -20,7 +20,14 @@ console.log("hermano", cards.previousElementSibling.previousElementSibling);
 let body = dom.querySelector("body");
 
 console.log(body.previousElementSibling);
+console.clear();
 
-// api.textContent = "lorem";
+let elementos = document.querySelector("#elementos");
 
-// console.log(api);
+elementos.textContent = "Nuevo texto";
+elementos.innerHTML = `<p> textos </p> <p> textos </p>`;
+
+setTimeout(() => {
+  body.classList.add("bg-red");
+}, 6000);
+console.log(body.classList);

@@ -220,3 +220,7 @@ ul.list > li.item a:visited {
 .bg-dark {
   background: var(--heavyMetal);
 }
+
+.bg-red {
+  background-color: red;
+}
