@@ -171,3 +171,7 @@ button:hover {
   background: var(--heavyMetal);
   color: var(--starship);
 }
+
+.borde {
+  border: 1px soldid red;
+}
