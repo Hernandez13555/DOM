@@ -2,7 +2,6 @@ import { Validar } from "./modulo";
 
 Validar;
 
->>>>>>> 312ebf1d3b1286ce1a789e0f30bfae22dd187f9f
 const formulario = document.querySelector("form");
 const nombre = document.querySelector("[name=nombre]");
 const apellido = document.querySelector("[name=apellido]");
