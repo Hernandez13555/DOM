@@ -9,6 +9,7 @@
 :root {
   --starship: #f0db4f;
   --heavyMetal: #323330;
+  --marfel: #636363;
   --drover: #fcecac;
   --sycamore: #8c7c3c;
   --white: #fff;
@@ -174,4 +175,49 @@ button:hover {
 
 .borde {
   border: 1px soldid red;
+}
+
+.select {
+  display: block;
+  width: 90%;
+  padding: calc(var(--padding) + 4px);
+  margin: var(--margin) auto;
+  border: solid 1px var(--heavyMetal);
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  color: var(--marfel);
+}
+
+.genero {
+  margin: 15px 1px;
+  width: 10%;
+}
+
+.temas {
+  margin: 15px 1px;
+  width: 10%;
+}
+
+.politica {
+  margin: 15px 1px;
+  width: 10%;
+}
+
+.form_radio {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form_check {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form_politicas {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }

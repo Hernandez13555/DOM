@@ -1,64 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <h1>Eventos</h1>
-    </div>
-  </header>
-  <main>
-    <section>
+  <body>
+    <header>
       <div class="container">
-        <div class="card">
-          <h2 class="center">Ingrese su datos de usuario</h2>
-          <form action="#">
-            <div class="form_control">
-            <input type="text" name="nombre" placeholder="Nombre" autocomplete="off" autofocus required>
-            </div>
-            <div class="form_control">
-            <input type="text" name="apellido" placeholder="Apellido" autocomplete="off"required>
-            </div>
-            <div class="form_control">
-            <input type="tel" name="telefono" placeholder="Telefono" autocomplete="off" required>
-            </div>
-            <div class="form_control">
-              <select name="seleccion" required>
-                <option>Giron</option>
-                <option>Floridablanca</option>
-              </select>
-            </div>
-            <div class="form_control">
-            <input type="number" name="documento" placeholder="Documento" autocomplete="off" >
-            </div>
-            <div class="form_control">
-            <input type="text" name="usuario" placeholder="Usuario" autocomplete="off" >
-            </div>
-            <div class="form_control">
-            <input type="password" name="contrasena" placeholder="Contraseña" autocomplete="off">
-            </div>
-            <div class="form_control">
-              <input type="checkbox" name="politicas" id="politicas">
-              <label for="politicas">politicas</label>
-            </div>
-            <button type="submit" id="btn_validar">Validar</button>
-          </form>
+        <h1>Eventos</h1>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="card">
+            <h2 class="center">Ingrese su datos de usuario</h2>
+            <form action="#">
+              <div class="form_control">
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre"
+                  autocomplete="off"
+                  autofocus
+                  required
+                />
+              </div>
+              <div class="form_control">
+                <input
+                  type="text"
+                  name="apellido"
+                  placeholder="Apellido"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form_control">
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="Telefono"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form_control">
+                <select name="seleccion" class="select" required>
+                  <option value="1">Giron</option>
+                  <option value="2">Bucaramanga</option>
+                  <option value="3">Piedecuesta</option>
+                  <option value="4">Floridablanca</option>
+                </select>
+              </div>
+              <div class="form_control">
+                <input
+                  type="number"
+                  name="documento"
+                  placeholder="Documento"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form_control">
+                <input
+                  type="text"
+                  name="usuario"
+                  placeholder="Usuario"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form_control">
+                <input
+                  type="password"
+                  name="contrasena"
+                  placeholder="Contraseña"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form_radio" required>
+                <input
+                  class="genero"
+                  type="radio"
+                  name="Hombre"
+                  id="Hombre"
+                  value="1"
+                />
+                <label for="Hombre">Hombre</label>
+                <input
+                  class="genero"
+                  type="radio"
+                  name="Mujer"
+                  id="Mujer"
+                  value="2"
+                />
+                <label for="Mujer">Mujer</label>
+              </div>
+              <div class="form_check" required>
+                <input
+                  class="temas"
+                  type="checkbox"
+                  name="Html"
+                  id="Html"
+                  value="1"
+                />
+                <label for="Html">Html</label>
+                <input
+                  class="temas"
+                  type="checkbox"
+                  name="Css"
+                  id="Css"
+                  value="2"
+                />
+                <label for="Css">Css</label>
+                <input
+                  class="temas"
+                  type="checkbox"
+                  name="JavaScript"
+                  id="JavaScript"
+                  value="3"
+                />
+                <label for="JavaScript">JavaScript</label>
+                <input
+                  class="temas"
+                  type="checkbox"
+                  name="Python"
+                  id="Python"
+                  value="4"
+                />
+                <label for="Python">Python</label>
+                <input
+                  class="temas"
+                  type="checkbox"
+                  name="Java"
+                  id="Java"
+                  value="5"
+                />
+                <label for="Java">Java</label>
+              </div>
+              <div class="form_politicas" required>
+                <input
+                  class="politica"
+                  type="checkbox"
+                  name="politicas"
+                  id="politicas"
+                  value="1"
+                />
+                <label for="politicas">politicas</label>
+              </div>
+              <button type="submit" id="btn_validar">Validar</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div id="usuarios">
-      </div>
-    </section>
-  </main>
-  <script type="module" src="app.js"></script>
-</body>
-
+      </section>
+      <section>
+        <div id="usuarios"></div>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
