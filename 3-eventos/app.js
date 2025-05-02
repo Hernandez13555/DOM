@@ -20,7 +20,10 @@ const acepta = (e) => {
   }
 };
 
-// const
+// const isValid = (e) => {
+//   let data = esValido(e);
+//   console.log(data);
+// };
 
 //Eventos
 

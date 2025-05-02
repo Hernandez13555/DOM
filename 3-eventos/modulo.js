@@ -12,10 +12,20 @@ export const esValido = (e) => {
     return elemento.type === "radio";
   });
 
-  // Validamos que tenemos almenos 1 campo seleccionado
-  const campo_radio = radiops.fined((radio) => radio.checked) || [];
+  const checkbox = [...campos].filter(
+    (elemento) => elemento.type === "checkbox"
+  );
 
-  console.log(campo_radio);
+  // Validamos que tenemos almenos 1 campo seleccionado
+  const campo_radio = radios.fined((radio) => radio.checked) || [];
+
+  const campos_checkbox = checkbox.fined((e) => e.checked);
+
+  if (campos_checkbox.length < 3) {
+    obj[checkbox[0].name] = "";
+  } else {
+    // obj[checkbox.name] = checkbox.value;
+  }
 
   // De no tener un cmpo de tipo redio seleccionado asignamos un campo
   if (campo_radio.length === 0) {

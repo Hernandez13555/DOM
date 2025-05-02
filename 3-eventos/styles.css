@@ -190,17 +190,17 @@ button:hover {
 }
 
 .genero {
-  margin: 15px 1px;
+  margin: 10px 30px;
   width: 10%;
 }
 
 .temas {
-  margin: 15px 1px;
+  margin: 10px 0px;
   width: 10%;
 }
 
 .politica {
-  margin: 15px 1px;
+  margin: 10px 0px;
   width: 10%;
 }
 
@@ -208,16 +208,18 @@ button:hover {
   display: flex;
   align-items: center;
   width: 100%;
+  margin: 15px;
 }
 
 .form_check {
+  margin-left: 5px;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 .form_politicas {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: center;
 }
