@@ -2,61 +2,51 @@ export const esValido = (e) => {
   e.preventDefault();
   // console.log(e.target.children);
   const obj = {};
-  // Todos los que sean requeridos
   const campos = [...e.target].filter((elemento) => {
     return elemento.hasAttribute("required");
   });
-
-  // Capturamos los campos de tipo radio
   const radios = [...campos].filter((elemento) => {
     return elemento.type === "radio";
   });
-
-  const checkbox = [...campos].filter(
-    (elemento) => elemento.type === "checkbox"
-  );
-
-  // Validamos que tenemos almenos 1 campo seleccionado
-  const campo_radio = radios.fined((radio) => radio.checked) || [];
-
-  const campos_checkbox = checkbox.fined((e) => e.checked);
-
-  if (campos_checkbox.length < 3) {
-    obj[checkbox[0].name] = "";
-  } else {
-    // obj[checkbox.name] = checkbox.value;
-  }
-
-  // De no tener un cmpo de tipo redio seleccionado asignamos un campo
+  const checkbox = [...campos].filter((elemento) => {
+    return elemento.type === "checkbox";
+  });
+  const campo_radio = radios.find((radio) => radio.checked) || [];
   if (campo_radio.length === 0) {
-    // console.log(radios[0].name);
     obj[radios[0].name] = "";
   } else {
-    obj[campo_radio.name] = campo_radio.value;
+    obj[radios[0].name] = campo_radio.value;
+  }
+  const campo_checkbox = checkbox.filter((e) => e.checked);
+  if (campo_checkbox.length < 3) {
+    obj[checkbox[0].name] = "";
+  } else {
+    obj[checkbox[0].name] = [...campo_checkbox].map(e => e.value);
   }
 
-  // Recorremos los elementos
   campos.forEach((campo) => {
-    switch (campo.tagName) {
+    switch (campo.tagName){
       case "INPUT":
-        // console.log(campo.type);
-        if (campo.value == "") {
-          campo.classList.add("error");
+        if (campo.type == "text" || campo.type == "number" || campo.type == "password" || campo.type == "tel") {
+          obj[campo.name] = campo.value;
+          if (campo.value.trim() === "") {
+            campo.classList.add("error");
+          }
         }
         break;
       case "SELECT":
-        console.log(campo.type);
-        if (campo.selectedIndex == 0) {
+        obj[campo.name] = campo.selectedIndex;
+        if (campo.selectedIndex === 0) {
           campo.classList.add("error");
         }
-        break;
       default:
         break;
     }
-    if (campo.value.trim() === "") {
-      campo.classList.add("pruebaError");
-    }
   });
-
   return obj;
 };
+//usuario
+//ciudades
+//generos
+//lenguajes
+//todo unido(usuario y lenguajes)
