@@ -1,204 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventos</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body>
-    <header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Eventos</h1>
+    </div>
+  </header>
+  <main>
+    <section>
       <div class="container">
-        <h1>Eventos</h1>
-      </div>
-    </header>
-    <main>
-      <section>
-        <div class="container">
-          <div class="card">
-            <h2 class="center">Ingrese su datos de usuario</h2>
-            <form action="#">
-              <div class="form_control">
-                <input
-                  type="text"
-                  name="nombre"
-                  placeholder="Nombre"
-                  autocomplete="off"
-                  autofocus
-                  required
-                />
+        <div class="card">
+          <h2 class="center">Ingrese su datos de usuario</h2>
+          <form action="#" novalidate>
+            <div class="form_control">
+              <input type="text" name="usuario" placeholder="Nombre" autocomplete="off" autofocus required>
+            </div>
+            <div class="form_control">
+              <input type="text" name="apellido" placeholder="Apellido" autocomplete="off" required>
+            </div>
+            <div class="form_control">
+              <input type="tel" name="telefono" placeholder="Telefono" autocomplete="off" required>
+            </div>
+            <div class="form_control">
+              <select name="ciudad" required>
+                <option class="oculto">Seleccione</option>
+                <option value="1">Floridablanca</option>
+                <option value="2">Piedecuesta</option>
+                <option value="3">Bucaramanga</option>
+                <option value="4">Giron</option>
+              </select>
+            </div>
+            <div class="form_control">
+              <input type="number" name="documento" placeholder="Documento" autocomplete="off" required>
+            </div>
+            <div class="form_control">
+              <input type="text" name="usuario" placeholder="Usuario" autocomplete="off" required>
+            </div>
+            <div class="form_control">
+              <input type="password" name="contrasena" placeholder="Contraseña" autocomplete="off" required>
+            </div>
+            <div>
+              <label>Lenguajes de Programacion(minimo 3):</label>
+              <div class="form_lenguaje">
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="html" value="1" required>
+                  <label for="lenguajes">HTML</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="css" value="2" required>
+                  <label for="lenguajes">CSS</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="JavaScript" value="3" required>
+                  <label for="lenguajes">JavaScript</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="php" value="4" required>
+                  <label for="lenguajes">PHP</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="java" value="5" required>
+                  <label for="lenguajes">Java</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="c#" value="6" required>
+                  <label for="lenguajes">C#</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="sql" value="7" required>
+                  <label for="lenguajes">SQL</label>
+                </div>
+                <div class="form_lenguajesCheck">
+                  <input type="checkbox" name="lenguaje[]" id="phyton" value="8" required>
+                  <label for="lenguajes">Phyton</label>
+                </div>
               </div>
-              <div class="form_control">
-                <input
-                  type="text"
-                  name="apellido"
-                  placeholder="Apellido"
-                  autocomplete="off"
-                  required
-                />
+            </div>
+            <div class="form_control">
+              <div class="form_radio">
+                <label for="hombre">Hombre</label>
+                <input type="radio" id="hombre" name="genero" value="1" required>
               </div>
-              <div class="form_control">
-                <input
-                  type="tel"
-                  name="telefono"
-                  placeholder="Telefono"
-                  autocomplete="off"
-                  required
-                />
+              <div class="form_radio">
+                <label for="mujer">Mujer</label>
+                <input type="radio" id="mujer" name="genero" value="2" required>
               </div>
-              <div class="form_control">
-                <select name="seleccion" class="select" required>
-                  <option value="1">Giron</option>
-                  <option value="2">Bucaramanga</option>
-                  <option value="3">Piedecuesta</option>
-                  <option value="4">Floridablanca</option>
-                </select>
-              </div>
-              <div class="form_control">
-                <input
-                  type="number"
-                  name="documento"
-                  placeholder="Documento"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="form_control">
-                <input
-                  type="text"
-                  name="usuario"
-                  placeholder="Usuario"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="form_control">
-                <input
-                  type="password"
-                  name="contrasena"
-                  placeholder="Contraseña"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="Html"
-                  id="Html"
-                  value="1"
-                />
-                <label for="Html">Html</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="Css"
-                  id="Css"
-                  value="2"
-                />
-                <label for="Css">Css</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="JavaScript"
-                  id="JavaScript"
-                  value="3"
-                />
-                <label for="JavaScript">JavaScript</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="Php"
-                  id="Php"
-                  value="4"
-                />
-                <label for="Php">Php</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="Java"
-                  id="Java"
-                  value="5"
-                />
-                <label for="Java">Java</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="C#"
-                  id="C#"
-                  value="6"
-                />
-                <label for="C#">C#</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="Python"
-                  id="Python"
-                  value="7"
-                />
-                <label for="Python">Python</label>
-              </div>
-              <div class="form_check" required>
-                <input
-                  class="temas"
-                  type="checkbox"
-                  name="Sql"
-                  id="Sql"
-                  value="8"
-                />
-                <label for="Sql">Sql</label>
-              </div>
-              <div class="form_radio" required>
-                <label for="Hombre">Hombre</label>
-                <input
-                  class="genero"
-                  type="radio"
-                  name="Hombre"
-                  id="Hombre"
-                  value="1"
-                />
-                <label for="Mujer">Mujer</label>
-                <input
-                  class="genero"
-                  type="radio"
-                  name="Mujer"
-                  id="Mujer"
-                  value="2"
-                />
-              </div>
-              <div class="form_politicas" required>
-                <input
-                  class="politica"
-                  type="checkbox"
-                  name="politicas"
-                  id="politicas"
-                  value="1"
-                />
-                <label for="politicas">Politicas</label>
-              </div>
-              <button type="submit" id="btn_validar">Validar</button>
-            </form>
-          </div>
+            </div>
+            <div class="form_control form_politico">
+              <input type="checkbox" name="politicas" id="politicas">
+              <label for="politicas">politica de tratamiento de datos</label>
+            </div>
+            <button type="submit" id="btn_validar">Validar</button>
+          </form>
         </div>
-      </section>
-      <section>
-        <div id="usuarios"></div>
-      </section>
-    </main>
-    <script type="module" src="app.js"></script>
-  </body>
+      </div>
+    </section>
+    <section>
+      <div id="usuarios">
+      </div>
+    </section>
+  </main>
+  <script type="module" src="appForm.js"></script>
+</body>
+
 </html>
